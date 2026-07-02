@@ -73,7 +73,7 @@ export default function ProductDivisions() {
                 id={`product-item-${index}`}
               >
                 {/* Top Image Panel - 4:3 Aspect Ratio */}
-                <div className="w-full aspect-[4/3] overflow-hidden relative bg-slate-100">
+                <div className="p-2 w-full aspect-[4/3] overflow-hidden relative bg-white">
                   <img
                     src={product.image}
                     alt={product.title}
