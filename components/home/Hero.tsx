@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       {/* Text Container sits directly on the background */}
-      <div className="relative max-w-7xl mx-auto px-6 w-full py-24 z-10">
+      <div className="relative max-w-7xl mx-auto px-6 w-full py-32 z-10">
         <div className="max-w-4xl flex flex-col gap-8">
           <h1 className="text-5xl md:text-7xl font-light tracking-tight text-white leading-[1.1]">
             Welcome to <br />

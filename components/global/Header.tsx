@@ -4,38 +4,30 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../ui/Button";
 
 export default function Header() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY || window.pageYOffset;
-      // Header is visible if we scroll up or if we are at the very top of the page
-      const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
-
-      setVisible(isVisible);
       setIsAtTop(currentScrollPos < 80);
-      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
-          } ${isAtTop
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 translate-y-0 ${isAtTop
             ? "bg-transparent"
             : "bg-white/95 backdrop-blur-md border-b border-slb-border shadow-sm"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
-          {/* Left: Animated Burger Icon */}
-          <div className="w-[30%] flex justify-start">
+          {/* Left: Animated Burger Icon & Company Name */}
+          <div className="w-[30%] flex justify-start items-center gap-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none z-50 relative cursor-pointer group"
@@ -54,6 +46,10 @@ export default function Header() {
                   }`}
               />
             </button>
+            <span className={`hidden md:inline-block text-[12px] font-extrabold tracking-widest uppercase transition-all duration-300 ${isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+              } ${isAtTop ? "text-white" : "text-[#0F0F10]"}`}>
+              WESTMARK TRADING CO. 9 QATAR
+            </span>
           </div>
 
           {/* Center: Large Logo */}
@@ -67,11 +63,15 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Right: CTA Button */}
-          <div className="w-[30%] flex justify-end">
-            <Button href="#contact" variant="primary" className="px-6 py-3 text-[10px] md:px-8 md:py-3.5 md:text-xs">
-              Request Quote
-            </Button>
+          {/* Right: Company Info */}
+          <div className={`w-[30%] flex flex-col items-end text-right transition-colors duration-300 ${isAtTop ? "text-white" : "text-[#0F0F10]"
+            }`}>
+            <span className="text-[12px] font-bold tracking-wider opacity-90 uppercase">AN ISO CERTIFIED CO.</span>
+            <div className="text-[14px] font-normal tracking-wide mt-1 flex flex-col md:flex-row items-end md:items-center gap-1 md:gap-2">
+              <a href="mailto:sales@westmarkqatar.com" className="hover:underline font-semibold opacity-95 hover:opacity-100 transition-opacity">sales@westmarkqatar.com</a>
+              <span className="hidden md:inline text-slate-400">|</span>
+              <a href="tel:+97451360061" className="hover:underline font-semibold opacity-95 hover:opacity-100 transition-opacity">Mob: +974 5136 0061</a>
+            </div>
           </div>
         </div>
       </header>

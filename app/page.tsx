@@ -4,7 +4,7 @@ import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ProductDivisions from "@/components/home/ProductDivisions";
-import Testimonials from "@/components/home/Testimonials";
+import Certifications from "@/components/home/Certifications";
 import CTA from "@/components/home/CTA";
 import Footer from "@/components/global/Footer";
 import ScrollReveal from "@/components/global/ScrollReveal";
@@ -18,7 +18,7 @@ export default function Home() {
       <About />
       <ProductDivisions />
       <WhyChooseUs />
-      <Testimonials />
+      <Certifications />
       <CTA />
       <Footer />
     </div>

@@ -41,11 +41,9 @@ export default function Footer() {
           <p className="text-xs text-blue-100/75 font-light">
             © {new Date().getFullYear()} Westmark Trading Co. All rights reserved.
           </p>
-          <div className="flex gap-8 text-xs text-blue-100/75 font-light">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Settings</a>
-          </div>
+          <p className="text-xs text-blue-100/75 font-light">
+            All Rights Reserved. Web Design Company Kochi - Techsoft
+          </p>
         </div>
       </div>
     </footer>

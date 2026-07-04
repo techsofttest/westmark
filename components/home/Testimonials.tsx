@@ -69,7 +69,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="relative w-full py-32 bg-slate-50 border-t border-b border-slb-border overflow-hidden">
+    <section className="relative w-full py-32 bg-slate-50 border-b border-slb-border overflow-hidden">
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes waveFloat1 {
           0% { transform: translate(0, 0) scale(1); }
