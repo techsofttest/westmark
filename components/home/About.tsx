@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="w-full bg-white grid grid-cols-1 lg:grid-cols-2 min-h-[600px] border-b border-slb-border">
       {/* Left Column - Content */}
-      <div className="flex flex-col justify-center text-center py-24 px-6 lg:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] lg:pr-20 gap-8 reveal">
+      <div className="flex flex-col justify-center py-24 px-6 lg:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] lg:pr-20 gap-8 reveal">
         <div className="flex flex-col gap-4">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-slb-blue">
             Sourcing

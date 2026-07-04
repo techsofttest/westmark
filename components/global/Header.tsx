@@ -21,8 +21,8 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 translate-y-0 ${isAtTop
-            ? "bg-transparent"
-            : "bg-white/95 backdrop-blur-md border-b border-slb-border shadow-sm"
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-md border-b border-slb-border shadow-sm"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
@@ -46,9 +46,13 @@ export default function Header() {
                   }`}
               />
             </button>
-            <span className={`hidden md:inline-block text-[12px] font-extrabold tracking-widest uppercase transition-all duration-300 ${isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+            <span className={`hidden md:inline-flex items-center gap-1.5 text-[12px] font-extrabold tracking-widest uppercase transition-all duration-300 ${isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
               } ${isAtTop ? "text-white" : "text-[#0F0F10]"}`}>
-              WESTMARK TRADING CO. 9 QATAR
+              <span>WESTMARK TRADING CO.</span>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span>QATAR</span>
             </span>
           </div>
 
