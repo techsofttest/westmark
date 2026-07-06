@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
           </div>
           <div className="whitespace-nowrap">
             <a
-              href="#products"
+              href="/#products"
               className="inline-flex items-center gap-2 text-slb-blue hover:text-slb-deep-blue font-bold text-xs tracking-widest uppercase group/arrow transition-colors duration-300"
             >
               <span>Explore our approach</span>
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom Image Panel with Absolute Blue Box Overlay */}
-        <div className="relative w-full aspect-[21/9] overflow-hidden mt-8 group bg-slate-100 reveal-img-container reveal">
+        <div className="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden mt-8 group bg-slate-100 reveal-img-container reveal">
           <img
             src="/home-page/y-us.png"
             alt="Industrial quality assurance and inspection representing Westmark Trading standards"
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
             decoding="async"
           />
           {/* Solid Blue Block Overlay */}
-          <div className="absolute left-0 top-0 bottom-0 w-full md:w-[350px] bg-slb-blue p-10 flex flex-col justify-between text-white z-10">
+          <div className="absolute left-0 top-0 bottom-0 w-full md:w-[350px] bg-slb-blue p-6 md:p-10 flex flex-col justify-between text-white z-10">
             <div className="flex flex-col gap-6">
               <h4 className="text-xl md:text-2xl font-bold tracking-tight leading-snug">
                 Improving performance in industrial supply chains.
@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
             </div>
             <div className="pt-6">
               <a
-                href="#products"
+                href="/#products"
                 className="inline-flex items-center gap-2 text-white font-bold text-xs tracking-widest uppercase group/btn-arrow hover:underline"
               >
                 <span>Explore</span>

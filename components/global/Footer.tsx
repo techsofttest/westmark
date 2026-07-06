@@ -9,7 +9,13 @@ export default function Footer() {
           <div className="md:col-span-6 flex flex-col gap-6">
             <img src="/logo/logo-white.png" alt="Westmark Trading Co. Logo" className="h-26 w-auto object-contain self-start" />
             <p className="text-base text-blue-100 leading-relaxed max-w-md font-light" id="footer-description">
-              Birkat Al Amawer, Doha - Qatar | 40126400 | +974 5136 0061 | sales@westmarkqatar.com | www.westmarkqatar.com
+              <a href="https://maps.app.goo.gl/qXkGugH7uYLaLpXr9" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-white transition-colors">Birkat Al Amawer, Doha - Qatar</a>
+              {" | "}
+              <a href="tel:+97440126400" className="hover:underline hover:text-white transition-colors">40126400</a>
+              {" | "} <br />
+              <a href="tel:+97451360061" className="hover:underline hover:text-white transition-colors">+974 5136 0061</a>
+              {" | "}
+              <a href="mailto:sales@westmarkqatar.com" className="hover:underline hover:text-white transition-colors">sales@westmarkqatar.com</a>
             </p>
           </div>
 

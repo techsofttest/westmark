@@ -22,7 +22,7 @@ export default function About() {
         </p>
         <div className="pt-2">
           <Button
-            href="#products"
+            href="/#products"
             variant="outline"
             className="gap-3 w-fit"
           >

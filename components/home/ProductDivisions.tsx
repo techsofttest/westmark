@@ -58,7 +58,7 @@ export default function ProductDivisions() {
           <h2 className="text-3xl md:text-5xl font-light tracking-tight text-[#0F0F10] leading-tight">
             Our Extensive Product Portfolio
           </h2>
-          <Button href="#contact" variant="tertiary" className="gap-2 group/arrow items-center whitespace-nowrap">
+          <Button href="/contact" variant="tertiary" className="gap-2 group/arrow items-center whitespace-nowrap">
             <span>Send Bulk Inquiry</span>
             <span className="text-lg group-hover/arrow:translate-x-1 transition-transform duration-300">→</span>
           </Button>
@@ -105,10 +105,13 @@ export default function ProductDivisions() {
                     </p>
                   </div>
                   <div>
-                    <span className="inline-flex items-center gap-2 text-white font-bold text-xs tracking-widest uppercase hover:underline">
+                    <a
+                      href={`/products#${product.title.toLowerCase().replace(/\[|\]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                      className="inline-flex items-center gap-2 text-white font-bold text-xs tracking-widest uppercase hover:underline"
+                    >
                       <span>Learn More</span>
                       <span className="text-sm">→</span>
-                    </span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -117,7 +120,7 @@ export default function ProductDivisions() {
 
           {/* 9th Solid Blue Extra Card */}
           <a
-            href="#contact"
+            href="/contact"
             className="relative overflow-hidden bg-slb-blue border border-slb-blue group w-full flex flex-col justify-between p-8 text-white cursor-pointer hover:bg-slb-deep-blue transition-colors duration-300 min-h-[350px]"
             id="product-item-extra"
           >
