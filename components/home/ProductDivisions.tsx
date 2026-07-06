@@ -88,10 +88,13 @@ export default function ProductDivisions() {
                   <h3 className="text-lg font-bold tracking-tight text-[#0F0F10] truncate">
                     {product.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-slb-blue font-bold text-xs tracking-widest uppercase">
+                  <a
+                    href={`/products#${product.title.toLowerCase().replace(/\[|\]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                    className="flex items-center gap-2 text-slb-blue font-bold text-xs tracking-widest uppercase hover:underline"
+                  >
                     <span>Explore</span>
                     <span className="text-sm">→</span>
-                  </div>
+                  </a>
                 </div>
 
                 {/* Hover Slide-in Overlay (Blue Box) */}
