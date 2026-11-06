@@ -20,10 +20,13 @@ const nextConfig: NextConfig = {
         port: "8000",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "admin.layrockglobal.co.uk",
+        port: "",
+        pathname: "/uploads/**",
+      },
     ],
-  },
-  experimental: {
-    agentFeedback: true,
   },
   turbopack: {
     rules: {
