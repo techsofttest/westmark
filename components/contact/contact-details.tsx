@@ -11,7 +11,6 @@ export function ContactDetails({ contact }: ContactDetailsProps) {
   const address = contact?.address;
   const email = contact?.email;
   const phone = contact?.phone;
-  const openingHours = contact?.opening_hours;
 
   const mapsUrl = address
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
@@ -122,12 +121,6 @@ export function ContactDetails({ contact }: ContactDetailsProps) {
                     >
                       {phone}
                     </a>
-
-                    {openingHours && (
-                      <p className="mt-0.5 text-[13px] text-[#737373]">
-                        {openingHours}
-                      </p>
-                    )}
                   </div>
                 </div>
               )}

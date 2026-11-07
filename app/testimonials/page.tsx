@@ -4,6 +4,9 @@ import { PageHero } from "@/components/ui/page-hero";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { getTestimonials } from "@/lib/testimonial";
 
+// Always fetch fresh Laravel API data
+export const dynamic = "force-dynamic";
+
 // Dynamic SEO Metadata
 export async function generateMetadata(): Promise<Metadata> {
   const testimonialData = await getTestimonials();

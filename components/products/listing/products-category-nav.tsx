@@ -14,6 +14,43 @@ export function ProductsCategoryNav({
   selectedCategory,
   onSelectCategory,
 }: ProductsCategoryNavProps) {
+  // Display message when no categories are available
+  if (!categories || categories.length === 0) {
+    return (
+      <section className="border-b border-black/[0.06] bg-white px-3.5 py-12 sm:px-6 lg:px-10">
+        <div className="mx-auto flex min-h-[180px] max-w-[1440px] flex-col items-center justify-center text-center">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-red-500"
+            >
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </div>
+
+          <h2 className="text-lg font-semibold text-[#171717]">
+            No Categories Available
+          </h2>
+
+          <p className="mt-2 max-w-md text-sm leading-6 text-[#737373]">
+            Sorry, no categories are available at the moment. Please check back
+            later.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="border-b border-black/[0.06] bg-white px-3.5 pb-6 pt-5 sm:px-6 sm:pb-8 sm:pt-6 lg:px-10 lg:pt-8">
       <div className="mx-auto max-w-[1440px]">

@@ -19,7 +19,6 @@ export interface ContactDetails {
   phone: string;
   whatsapp: string;
   email: string;
-  opening_hours: string;
 }
 
 export interface ContactPageData {
